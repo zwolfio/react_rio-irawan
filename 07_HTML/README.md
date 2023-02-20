@@ -11,11 +11,11 @@ adalah markup hypertext language atau sebuah bahasa markup yang menjadi standart
 
 ### Struktur Dasar HTML
 
-- <!DOCTYPE html>  untuk mendefinisikan dokumen sebagai HTML 5
-- <html> element dasar HTML
-- <head> informasi tentang dokumen
-- <title> judul untuk website
-- <body> konten dalam website
+- <!--<!DOCTYPE html>-->  untuk mendefinisikan dokumen sebagai HTML 5
+- <!--<html>--> element dasar HTML
+- <!--<head>--> informasi tentang dokumen
+- <!--<title>--> judul untuk website
+- <!--<body>--> konten dalam website
 
 ### CSS sebagai Pelengkap
 
