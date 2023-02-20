@@ -10,12 +10,13 @@ adalah markup hypertext language atau sebuah bahasa markup yang menjadi standart
 - mempublikasi web secara online
 
 ### Struktur Dasar HTML
-
-- <!--<!DOCTYPE html>-->  untuk mendefinisikan dokumen sebagai HTML 5
-- <!--<html>--> element dasar HTML
-- <!--<head>--> informasi tentang dokumen
-- <!--<title>--> judul untuk website
-- <!--<body>--> konten dalam website
+<p>
+- <!DOCTYPE html>  untuk mendefinisikan dokumen sebagai HTML 5
+- <html> element dasar HTML
+- <head> informasi tentang dokumen
+- <title> judul untuk website
+- <body> konten dalam website
+</p>
 
 ### CSS sebagai Pelengkap
 
