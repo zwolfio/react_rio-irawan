@@ -1,0 +1,36 @@
+.hero h1 {
+    color: #4cb7d8;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0%;
+}
+
+.hero {
+    margin-bottom: 5%;
+}
+
+.btn {
+    background-color: #4cb7d8;
+}
+
+.footer {
+    background-color: #4cb7d8;
+}
+
+.footer-about h5 {
+    color: white;
+}
+
+.form-contactus {
+    width: 50%;
+    text-align: start;
+}
