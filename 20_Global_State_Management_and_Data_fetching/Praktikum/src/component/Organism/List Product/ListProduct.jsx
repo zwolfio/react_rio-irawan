@@ -20,9 +20,9 @@ const ListProduct = ({ products, handleDelete }) => {
 							</tr>
 						</thead>
 						<tbody>
-							{products.map((product, idx) => (
+							{ products.map((product, idx) => (
 								<tr key={idx}>
-									{/* <th scope="col">{product.uuid}</th> */}
+									<th scope="col">{product.uuid}</th>
 									<th scope="col">{product.productName}</th>
 									<th scope="col">{product.productCategory}</th>
 									<th scope="col">{product.productImage}</th>

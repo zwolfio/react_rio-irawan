@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
-export const useProductSelector = () =>
-	useSelector((state) => state.products.products);
+// export const useProductSelector = 
+// 	useSelector((state) => state.products.products);

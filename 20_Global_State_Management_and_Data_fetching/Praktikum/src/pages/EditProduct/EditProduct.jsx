@@ -1,15 +1,14 @@
 import { useFormik } from "formik";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useSelector  ,useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import * as Yup from "yup";
-import { useProductSelector } from "../../config/redux/product/productSelector";
-import { productAction } from "../../config/redux/product/productSlice";
+import productSlice from "../../config/redux/product/productSlice";
 import Navbar from "../../component/Organism/Navbar/Navbar";
 
 const EditProduct = () => {
 	const { id } = useParams();
-	const products = useProductSelector();
+	const products = useSelector((state) => state.products.products);
 	const product = products.find((productData) => productData.uuid == id);
 	const regex = /^[^\s][\w\s]*[^\s\W]$/;
 	const dispatch = useDispatch();
@@ -41,7 +40,7 @@ const EditProduct = () => {
 				uuid: product.uuid,
 				...values,
 			});
-			dispatch(productAction.update([...productBaru]));
+			dispatch(productSlice.actions.update([...productBaru]));
 			alert("Berhasil Mengedit Data");
 		},
 	});

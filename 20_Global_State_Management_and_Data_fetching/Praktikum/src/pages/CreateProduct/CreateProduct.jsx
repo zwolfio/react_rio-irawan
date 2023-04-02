@@ -5,11 +5,12 @@ import ListProduct from "../../component/Organism/List Product/ListProduct";
 import Article from "../../Article";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useProductSelector } from "../../config/redux/product/productSelector";
-import { useDispatch } from "react-redux";
-import { productAction } from "../../config/redux/product/productSlice";
+// import { useProductSelector } from "../../config/redux/product/productSelector";
+import { useSelector  ,useDispatch } from "react-redux";
+import productSlice from "../../config/redux/product/productSlice";
 
 function CreateProduct() {
+	const products = useSelector((state) => state.products.products);
 	const regex = /^[^\s][\w\s]*[^\s\W]$/;
 	const formik = useFormik({
 		initialValues: {
@@ -37,7 +38,7 @@ function CreateProduct() {
 		onSubmit: (values) => {
 			console.log(values);
 			dispatch(
-				productAction.add([...products, { ...values, uuid: crypto.randomUUID() }])
+				productSlice.actions.add([ ...products, { ...values, uuid: crypto.randomUUID() }])
 			);
 		},
 	});
@@ -45,13 +46,12 @@ function CreateProduct() {
 	const handleBahasa = () => setIsIndonesia(!isIndonesia);
 
 	const dispatch = useDispatch();
-	const products = useProductSelector();
 
 	const handleDelete = (uuid) => {
 		if (window.confirm("Apakah Anda yakin ingin menghapus data ini?")) {
 			const newProducts = products.filter((product) => product.uuid !== uuid);
 			console.log(newProducts);
-			dispatch(productAction.delete([...newProducts]));
+			dispatch(productSlice.actions.delete([...newProducts]));
 		}
 	};
 	return (

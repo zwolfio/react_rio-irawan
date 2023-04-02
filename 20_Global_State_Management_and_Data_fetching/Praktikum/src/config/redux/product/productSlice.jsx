@@ -39,4 +39,4 @@ const productSlice = createSlice({
 	},
 });
 
-export const { actions: productAction, reducer: productReducer } = productSlice;
+export default productSlice;
