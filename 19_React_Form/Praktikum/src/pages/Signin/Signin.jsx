@@ -2,8 +2,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React from "react";
 import Navbar from "../../component/Organism/Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+	const navigate = useNavigate()
 	const formik = useFormik({
 		initialValues: {
 			email: "",
@@ -21,6 +23,7 @@ const Signup = () => {
 		onSubmit: (values) => {
 			alert(JSON.stringify(values, null, 2));
 			formik.resetForm();
+			navigate('/createproduct')
 		},
 	});
 	return (

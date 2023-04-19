@@ -2,7 +2,9 @@ import { useFormik } from "formik";
 import React from "react";
 import Navbar from "../../component/Organism/Navbar/Navbar";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
+	const navigate = useNavigate()
 	const formik = useFormik({
 		initialValues: {
 			firstName: "",
@@ -31,6 +33,7 @@ const Signup = () => {
 		onSubmit: (values) => {
 			alert(JSON.stringify(values, null, 2));
 			formik.resetForm();
+			navigate('/signin')
 		},
 	});
 
