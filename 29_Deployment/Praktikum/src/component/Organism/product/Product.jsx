@@ -81,14 +81,14 @@ const Product = () => {
                                     <p>{item.productDescription}</p>
                                     <button className="btn btn-outline-primary me-1">
 											<Link
-												to={`/DetailProduct/${product.uuid}`}
+												to={`/DetailProduct/${item.uuid}`}
 												className="text-decoration-none">
 												Detail
 											</Link>
 										</button>
 										<button className="btn btn-outline-warning me-1">
 											<Link
-												to={`/editproduct/${product.uuid}`}
+												to={`/editproduct/${item.uuid}`}
 												className="text-decoration-none">
 												Edit
 											</Link>
